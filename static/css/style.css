@@ -1,0 +1,17 @@
+h1 {
+    color: black;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body{
+    background-color: brown;
+}
+
+.image-style {
+    width: 300px;
+    height: auto; /* Maintains aspect ratio */
+    border: 2px solid #ccc; /* Optional: Add a border for better visibility */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
