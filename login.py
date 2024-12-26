@@ -27,5 +27,15 @@ def logout():
     session.pop('email', None)
     return render_template("login.html")
 
+@app.route('/profile')
+def profile():
+    """Route to render the profile page if the user is logged in."""
+    if 'email' in session:
+        email = session['email']
+        return render_template('profile.html', name=email)
+    else:
+        msg = "Please log in first."
+        return render_template('login.html', msg=msg)
+
 if __name__ == "__main__":
     app.run(debug=True)
