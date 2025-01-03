@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Heloo World</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Index{% endblock title %}
+
+{% block content %}
+<h1>Hello World</h1>
+<p>{{ myvalue }}</p> <br>
+<p>{{ myresult }}</p>
+<ul>
+    {% for item in mylist %}
+        <li {% if item == 30 %}style="color:red"{% endif %}>
+            {{ item }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+
+    
